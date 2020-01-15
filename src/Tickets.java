@@ -1,19 +1,18 @@
 
 public interface Tickets {
 	
-	public String veranstaltungsort = " ";
-	public String veranstaltungsname =" ";
-	public double basispreis = 0;
-	public double ticketpreis = 0;  
+	void setVeranstaltungsort(String vort);
+	String getVeranstaltungsort();
 	
-	abstract double berechneTicketpreis();
+	void setVeranstaltungsname (String vname);
+	String getVeranstaltungsname();
 	
-	public default double getbasispreis() {
-		return basispreis;
-	}
-//	public default void ausgabe() {
-//		System.out.println("Veranstaltungsname: "+veranstaltungsname);
-//		System.out.println("Veranstaltungsort: "+veranstaltungsort);
-//		System.out.println("Preis pro Ticket: "+berechneTicketpreis()+" €");
-//	}
+	void setBasispreis(double bpreis);
+	double getBasispreis();
+	
+	void setTicketpreis (double tpreis);
+	double getTicketpreis();
+	
+	void ausgabe();
+
 }

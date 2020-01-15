@@ -5,12 +5,11 @@ public class Ticketshop {
 	static ArrayList<Tickets> Liste = new ArrayList<Tickets>();
 	
 	public static void main(String[] args) {
-		
 //		new SubSportticket("Tennis","Monaco",350);
 //		new SubKonzertticket("Rock'n Roll","Dogana Innsbruck",20.99);
 //		new SubTheaterticket("Der eiserne Mann","Landestheater Innsbruck",24.99);
 	}
-
+	
 	public void bestellen(Tickets t)
 	{
 		Liste.add(t);
@@ -25,9 +24,9 @@ public class Ticketshop {
 		double günstigstes = 1000.0;
 		for(int i=0;i<Liste.size();i++)
 		{
-			if(Liste.get(i).ticketpreis<günstigstes)
+			if(Liste.get(i).getTicketpreis()<günstigstes)
 			{
-				günstigstes = Liste.get(i).ticketpreis;
+				günstigstes = Liste.get(i).getTicketpreis();
 			}
 		}
 		return günstigstes;
@@ -38,11 +37,12 @@ public class Ticketshop {
 		double teuerstes = 0.0;
 		for(int i=0;i<Liste.size();i++)
 		{
-			if(Liste.get(i).ticketpreis>teuerstes)
+			if(Liste.get(i).getTicketpreis()>teuerstes)
 			{
-				teuerstes = Liste.get(i).ticketpreis;
+				teuerstes = Liste.get(i).getTicketpreis();
 			}
 		}
 		return teuerstes;
 	}
+	
 }
